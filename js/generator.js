@@ -50,8 +50,11 @@ function generateIdea() {
 
         for (i = 0; i < amount; i++) {
             pickerNumber = Math.floor((Math.random() * strings.includings.length) + 1);
-
-            finalIdea = finalIdea + (strings.includings[pickerNumber-1] + ", ");
+            
+            if (i == amount) {
+                finalIdea = finalIdea + "and ";
+            }
+            finalIdea = finalIdea + ("a " + strings.includings[pickerNumber-1]);
         }
     }
 
