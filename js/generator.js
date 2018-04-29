@@ -48,13 +48,13 @@ function generateIdea() {
         finalIdea = finalIdea + " that includes: ";
         amount = Math.floor((Math.random() * 3) + 1);
 
-        for (i = 0; i < amount; i++) {
+        for (i = 0; i <= amount; i++) {
             pickerNumber = Math.floor((Math.random() * strings.includings.length) + 1);
             
             if (i == amount) {
                 finalIdea = finalIdea + "and ";
             }
-            finalIdea = finalIdea + ("a " + strings.includings[pickerNumber-1]);
+            finalIdea = finalIdea + ("a " + strings.includings[pickerNumber-1] + " ");
         }
     }
 
